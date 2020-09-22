@@ -1,0 +1,43 @@
+@media(max-width:575.98px) {
+    .myContent {
+        margin-top: 100px;
+        z-index: 4;
+        margin-left: 0px!important;
+    }
+    .sideNav {
+        transition: all .5s!important;
+    }
+    .sideNavClose {
+        width: 00px!important;
+        transition: all .5s!important;
+    }
+    .menuBtn {
+        color: #E91E63;
+        font-size: 25px;
+        border: none;
+        outline: none;
+        transition: all .5s!important;
+        transform: scale(1)!important;
+    }
+    .menuBtn:hover {
+        color: #E91E63;
+        border: none;
+        outline: none;
+    }
+    .menuText {
+        font-family: arial;
+        font-weight: 100;
+        margin-left: 15px;
+        font-size: 20px!important;
+    }
+    .myMenu:hover {
+        border-left: 0px solid white!important;
+        color: black;
+        background: white;
+    }
+    .myMenu {
+        color: white;
+        transition: .1s!important;
+        display: block;
+    }
+}

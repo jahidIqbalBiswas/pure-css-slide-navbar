@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide navbar</title>
+    <link rel="stylesheet" href="css/all.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+
+                <!--[toggler]-->
+
+                <div class="toggleContainer menuBtn">
+                    <div class="bar-1"></div>
+                    <div class="bar-2"></div>
+                    <div class="bar-3"></div>
+                </div>
+
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+        </nav>
+        <div class="sideNavClose slideMyNav">
+
+            <ul class="myMenuDiv">
+
+                <li>
+                    <a href="#">
+                        <div><i class="fa myFa  fa-home" aria-hidden="true"><span class="menuText d-none">Home</span></i></div>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div><i class="fa myFa fa-envelope" aria-hidden="true"><span class="menuText d-none">Contact</span></i>
+                        </div>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div> <i class="fa myFa fa-heart" aria-hidden="true"><span class="menuText d-none">Services</span></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div><i class="fa myFa fa-window-restore" aria-hidden="true"><span class="menuText d-none">Portfolio</span></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div><i class="fas myFa fa-handshake"><span class="menuText d-none">Help</span></i></div>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div><i class="fas myFa fa-info-circle"><span class="menuText d-none">About</span></i>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+    <div class=" myOverLay">
+    </div>
+
+    <script type="text/javascript">
+        var mySlideBar = document.querySelector(".slideMyNav");
+        var overLay = document.querySelector(".myOverLay");
+        var menuButton = document.querySelector(".menuBtn");
+        var menuText = document.querySelectorAll(".menuText");
+        var menuTextLength = menuText.length;
+
+        menuButton.addEventListener("click", slideNav);
+        overLay.addEventListener("click", slideNav);
+
+        function slideNav() {
+            if (mySlideBar.classList.contains("sideNavClose")) {
+                mySlideBar.classList.remove("sideNavClose");
+                mySlideBar.classList.add("sideNav");
+                overLay.classList.add("blackOverLay");
+                menuButton.classList.add("click");
+                menuButton.classList.remove("myBtnRemove");
+                for (i = 0; i <= menuTextLength; i++) {
+                    menuText[i].classList.remove("d-none");
+                };
+
+            } else {
+                mySlideBar.classList.remove("sideNav");
+                mySlideBar.classList.add("sideNavClose");
+                overLay.classList.remove("blackOverLay");
+                menuButton.classList.remove("click");
+                menuButton.classList.add("myBtnRemove");
+                for (i = 0; i <= menuTextLength; i++) {
+                    menuText[i].classList.add("d-none");
+                };
+            };
+
+        };
+    </script>
+</body>
+
+</html>

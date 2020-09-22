@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+:root {
+    --topNavBarColor: #fff;
+    --slideNavColor: #E91E63;
+    --slideMenuHiddenBorder: 1px solid rgb(245, 78, 142);
+    --slideMenuHoverAbleBorder: 20px solid #fff;
+    --slideMenuHoverAbleBackground: #fff;
+    --navBoxShadow: 0px -5px 8px 0px #222;
+    --overLay: rgba(0, 0, 0, .3);
+    --hoverAbleASlideNavTextColor: #111;
+    --slideNavFontFamily: 'Roboto', sans-serif;
+    ;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 96%;
+    margin: auto;
+    padding: 5px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-none {
+    display: none;
+}
+
+
+/*navbar*/
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--topNavBarColor);
+    width: 100%;
+    z-index: 99999999999999;
+    padding: 8px 0px;
+    box-shadow: var(--navBoxShadow);
+}
+
+.logo {
+    width: 100px;
+    margin-top: 2px;
+}
+
+.menuBtn {
+    color: var(--slideNavColor);
+    font-size: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.sideNav {
+    width: 210px;
+    height: 100%;
+    background: var(--slideNavColor);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding-top: 20px;
+    transition: all .3s;
+    z-index: 10;
+    overflow-x: hidden;
+}
+
+.sideNavClose {
+    width: 60px;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: var(--slideNavColor);
+    padding-top: 20px;
+    z-index: 10;
+    transition: all .2s;
+    overflow-x: hidden;
+}
+
+.slideMyNav {
+    margin-top: 3rem;
+}
+
+.blackOverLay {
+    background: var(--overLay);
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: block;
+    bottom: 0px;
+    z-index: 7;
+    cursor: pointer;
+}
+
+.myContent {
+    margin-top: 100px;
+    z-index: 4;
+    margin-left: 60px;
+}
+
+.myMenuDiv {
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 1rem;
+}
+
+.myMenuDiv>li>a {
+    color: white;
+    border-left: var(--slideMenuHiddenBorder);
+    transition: .6s;
+    display: block;
+    margin: .7rem 0px;
+    padding: .7rem 0px;
+    padding-left: 1.2rem;
+}
+
+.myMenuDiv>li>a:hover {
+    border-left: var(--slideMenuHoverAbleBorder);
+    color: var(--hoverAbleASlideNavTextColor);
+    background: var(--slideMenuHoverAbleBackground);
+}
+
+.myFa {
+    font-size: 20px;
+}
+
+.menuText {
+    font-family: var(--slideNavFontFamily);
+    font-weight: 1;
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+
+/*================
+toggler button
+================*/
+
+.toggleContainer {
+    padding: 2px 0px;
+}
+
+.bar-1,
+.bar-2,
+.bar-3 {
+    width: 26px;
+    height: 3px;
+    background: var(--slideNavColor);
+    margin: 6px;
+    transition: .4s;
+    border-radius: 2px;
+}
+
+.click .bar-1 {
+    transform: rotate(45deg)translate(8px, 5px);
+}
+
+.click .bar-2 {
+    opacity: 0;
+}
+
+.click .bar-3 {
+    transform: rotate(-47deg)translate(8px, -4px);
+}
